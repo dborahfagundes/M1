@@ -66,7 +66,7 @@ body {
     justify-content: space-between;
 }
 
-.respostas .btn_resposta {
+.respostas .btn {
     display: flex;
     align-items: flex-start;
     cursor: pointer;
@@ -77,10 +77,12 @@ body {
     color: #fff;
     background-color: #091A78;
     cursor: pointer;
-    /*nao esta pegando*/
+    
 }
 
-.btn_resposta:hover {
+
+
+.btn:hover {
     background: #4169E1;
     border-color: #4169E1;
 }
@@ -104,7 +106,7 @@ body {
 
 .button #start,
 .submit-resposta,
-.botao-jogar-novamente {
+.botao-jogar-novamente, #final,.next-resposta {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
@@ -135,7 +137,7 @@ body {
     border-color:#05a805
 }
 
-.submit-resposta:hover{
+.next-resposta:hover{
     color: #000;
     background: #edfd0f;
     border-color:#edfd0f

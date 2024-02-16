@@ -3,6 +3,8 @@ const questoesContainer = document.querySelector(".container-quiz");
 const respostas = document.querySelector(".respostas");
 const questao = document.querySelector(".questao");
 const home = document.querySelector(".home");
+const final = document.querySelector("#final");
+const next = document.querySelector(".next-resposta");
 
 let usuarioNome; // Adicionado para armazenar o nome do usuário
 let acertos = 0;
@@ -10,6 +12,7 @@ let acertos = 0;
 let aux = 0;
 
 btnStart.addEventListener("click", start);
+next.addEventListener("click", proximaPergunta);
 
 function start(){
 	btnStart.classList.add("hide");
@@ -24,10 +27,15 @@ function proximaPergunta(){
 	while(respostas.firstChild){
 		respostas.removeChild(respostas.firstChild);
 	}
+
+    document.body.removeAttribute("class");
+    next.classList.add("hide");
+
 	questao.textContent = questoes[aux].pergunta;
 	questoes[aux].opcao.forEach(opcoes => {
 		const botao = document.createElement("button");
-		botao.classList.add("btn_resposta");
+		botao.classList.add("btn");
+       
 		botao.textContent = opcoes;
 		if(opcoes === questoes[aux].resposta){
 			botao.classList.add("correto");
@@ -46,26 +54,30 @@ function opcaoSelecionada(clicado){
 
 	if(textoOpcaoClicada === respostaCorreta){
 		document.body.classList.add("correto");
-
+		acertos++; // Incrementar o contador de acertos
 	}else{
 		document.body.classList.add("incorreto");
 	}
 
-	document.querySelectorAll(".btn").forEach(opcaoBotao =>{
-		
-		if(opcaoBotao === respostaCorreta){
-			document.classList.add("correto");
-		}else{
-			document.classList.add("incorreto");
-		}
+	
+	document.querySelectorAll(".btn").forEach(opcaoBotao => {
+        opcaoBotao.disabled = true;
 	});
 
+    next.classList.remove("hide");
+    aux++;
 
+    // Verificar se todas as perguntas foram respondidas
+    if(aux === questoes.length){
+        finalizar();
+    }
 }
+
 
 function finalizar(){
-    alert(`parabens"${usuarioNome} voce finalizou o quiz!`)
+    alert(`Parabéns ${usuarioNome}! Você finalizou o quiz com ${acertos} acertos de ${questoes.length} perguntas.`);
 }
+
 
 
 
