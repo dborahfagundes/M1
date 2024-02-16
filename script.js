@@ -36,6 +36,7 @@ function proximaPergunta(){
 
 		botao.addEventListener("click", opcaoSelecionada);
 	});
+    
 }
 
 function opcaoSelecionada(clicado){
@@ -59,18 +60,12 @@ function opcaoSelecionada(clicado){
 		}
 	});
 
-    if (aux < questao.length - 1) {
-        aux++;
-        proximaPergunta();
-    } else {
-        // Exibir resultado final com nome do usuário e quantidade de acertos
-        alert(
-            `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questao.length } perguntas.`
-        );
-    }
 
 }
 
+function finalizar(){
+    alert(`parabens"${usuarioNome} voce finalizou o quiz!`)
+}
 
 
 
