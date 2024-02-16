@@ -59,17 +59,13 @@ function opcaoSelecionada(clicado) {
 
 }
 
-// ... (código não alterado)
-
-// Verificar se há mais perguntas ou se o quiz chegou ao fim
-
 if (aux < questoes.length - 1) {
     aux++;
     proximaPergunta();
 } else {
     // Exibir resultado final com nome do usuário e quantidade de acertos
     alert(
-        `Quiz concluído`, ${ usuarioNome }!`\nVocê acertou` ${ acertos } `de` ${ questoes.length } `perguntas.`
+        `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questoes.length } perguntas.`
     );
 }
 
