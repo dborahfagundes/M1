@@ -77,7 +77,6 @@ body {
     color: #fff;
     background-color: #091A78;
     cursor: pointer;
-    /*nao esta pegando*/
 }
 
 .btn_resposta:hover {
@@ -93,7 +92,7 @@ body {
     border-radius: 30px;
     color: #fff;
     background-color: #091A78;
-    margin-top: 10px; /* Adiciona um espaço entre o botão e as respostas */
+    margin-top: 10px;
 }
 
 .btn_proxima_questao:hover {
@@ -127,7 +126,7 @@ body {
     padding: 10px;
     border-radius: 30px;
     background-color: #091A78;
-    margin-top: 10px; /* Adiciona um espaço entre o botão e as respostas */
+    margin-top: 10px;
 }
 .final:hover {
     color: #000;
@@ -163,8 +162,3 @@ body {
 .incorreto{
     background: #e60808;
 }
-
-
-
-
-
