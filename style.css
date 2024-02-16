@@ -120,6 +120,21 @@ body {
     border-color:#05a805
 }
 
+.final{ 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #091A78;
+    margin-top: 10px; /* Adiciona um espaço entre o botão e as respostas */
+}
+.final:hover {
+    color: #000;
+    background: #05a805;
+    border-color:#05a805
+}
+
 .submit-resposta:hover{
     color: #000;
     background: #edfd0f;
