@@ -23,4 +23,16 @@ function opcaoSelecionada(clicado) {
 
     // Verificar se há mais perguntas ou se o quiz chegou ao fim
 
-    //Parte Gabriel
+    if (aux < questoes.length - 1) {
+        aux++;
+        proximaPergunta();
+    } else {
+        // Exibir resultado final com nome do usuário e quantidade de acertos
+        alert(
+            Quiz concluído, ${usuarioNome}!\nVocê acertou ${acertos} de ${questoes.length} perguntas.
+        );
+    }
+
+    // Restante do código não foi alterado
+    
+    // Parte Gabriel
