@@ -29,10 +29,10 @@ function opcaoSelecionada(clicado) {
     } else {
         // Exibir resultado final com nome do usuário e quantidade de acertos
         alert(
-            Quiz concluído, ${usuarioNome}!\nVocê acertou ${acertos} de ${questoes.length} perguntas.
+            "Quiz concluído", usuarioNome, "\nVocê acertou", acertos, "de", questoes.length, "perguntas."
         );
     }
 
+
     // Restante do código não foi alterado
-    
-    // Parte Gabriel
+    // ...*/
