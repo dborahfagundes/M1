@@ -7,12 +7,10 @@ let usuarioNome; // Adicionado para armazenar o nome do usuário
 let acertos = 0; // Adicionado para contar a quantidade de respostas corretas
 
 let aux = 0;
+usuarioNome = prompt("Digite seu nome:")
 btnStart.addEventListener("click", start);
 
 function start() {
-
-    usuarioNome = prompt("Digite seu nome:");
-
     btnStart.classList.add("hide");
     questoesContainer.classList.remove("hide");
     proximaPergunta();
@@ -58,18 +56,18 @@ function opcaoSelecionada(clicado) {
             document.classList.add("incorreto");
         }
     });
-
+    if (aux < questao.length - 1) {
+        aux++;
+        proximaPergunta();
+    } else {
+        // Exibir resultado final com nome do usuário e quantidade de acertos
+        alert(
+            `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questao.length } perguntas.`
+        );
+    }
 }
 
-if (aux < questao.length - 1) {
-    aux++;
-    proximaPergunta();
-} else {
-    // Exibir resultado final com nome do usuário e quantidade de acertos
-    alert(
-        `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questao.length } perguntas.`
-    );
-}
+
 
 
 
