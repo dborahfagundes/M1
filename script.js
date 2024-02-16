@@ -23,12 +23,12 @@ function proximaPergunta() {
     while (respostas.firstChild) {
         respostas.removeChild(respostas.firstChild);
     }
-    questao.textContent = questoes[aux].pergunta;
-    questoes[aux].opcao.forEach(opcoes => {
+    questao.textContent = questao[aux].pergunta;
+    questao[aux].opcao.forEach(opcoes => {
         const botao = document.createElement("button");
         botao.classList.add("btn_resposta");
         botao.textContent = opcoes;
-        if (opcoes === questoes[aux].resposta) {
+        if (opcoes === questao[aux].resposta) {
             botao.classList.add("correto");
         }
         respostas.appendChild(botao);
@@ -41,7 +41,7 @@ function proximaPergunta() {
 function opcaoSelecionada(clicado) {
     const opcaoClicada = clicado.target;
     const textoOpcaoClicada = opcaoClicada.textContent;
-    const respostaCorreta = questoes[aux].resposta;
+    const respostaCorreta = questao[aux].resposta;
 
     if (textoOpcaoClicada === respostaCorreta) {
         document.body.classList.add("correto");
@@ -61,13 +61,13 @@ function opcaoSelecionada(clicado) {
 
 }
 
-if (aux < questoes.length - 1) {
+if (aux < questao.length - 1) {
     aux++;
     proximaPergunta();
 } else {
     // Exibir resultado final com nome do usuário e quantidade de acertos
     alert(
-        `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questoes.length } perguntas.`
+        `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questao.length } perguntas.`
     );
 }
 
