@@ -3,7 +3,6 @@ const questoesContainer = document.querySelector(".container-quiz");
 const respostas = document.querySelector(".respostas");
 const questao = document.querySelector(".questao");
 
-
 let usuarioNome; // Adicionado para armazenar o nome do usuário
 let acertos = 0; // Adicionado para contar a quantidade de respostas corretas
 
@@ -11,6 +10,9 @@ let aux = 0;
 btnStart.addEventListener("click", start);
 
 function start() {
+
+    usuarioNome = prompt("Digite seu nome:");
+
     btnStart.classList.add("hide");
     questoesContainer.classList.remove("hide");
     proximaPergunta();
@@ -68,12 +70,6 @@ if (aux < questoes.length - 1) {
         `Quiz concluído, ${ usuarioNome }!\nVocê acertou ${ acertos } de ${ questoes.length } perguntas.`
     );
 }
-
-
-// Restante do código não foi alterado
-// ...*/
-
-
 
 
 
