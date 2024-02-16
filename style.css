@@ -85,6 +85,23 @@ body {
     border-color: #4169E1;
 }
 
+.btn_proxima_questao {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #091A78;
+    margin-top: 10px; /* Adiciona um espaço entre o botão e as respostas */
+}
+
+.btn_proxima_questao:hover {
+    color: #000;
+    background: #05a805;
+    border-color: #05a805;
+}
+
 .button #start,
 .submit-resposta,
 .botao-jogar-novamente {
