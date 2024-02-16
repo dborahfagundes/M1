@@ -103,7 +103,8 @@ body {
 
 .button #start,
 .submit-resposta,
-.botao-jogar-novamente {
+.botao-jogar-novament,
+#final {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
@@ -111,6 +112,7 @@ body {
     border-radius: 30px;
     color: #fff;
     background-color: #091A78;
+    margin-top: 10px;
 }
 
 #start:hover{
