@@ -69,13 +69,14 @@ function opcaoSelecionada(clicado){
 
     // Verificar se todas as perguntas foram respondidas
     if(aux === questoes.length){
+        next.classList.add("hide");
         finalizar();
     }
 }
 
 
 function finalizar(){
-    alert(`Parabéns ${usuarioNome}! Você finalizou o quiz com ${acertos} acertos de ${questoes.length} perguntas.`);
+    alert(`Parabéns ${usuarioNome}! Você finalizou o quiz com ${acertos} acertos de ${questoes.length} perguntas. Quiz finalizado`);
 }
 
 
